@@ -16,7 +16,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+<<<<<<< HEAD
 Route::post('/contact', [App\Http\Controllers\FeedbackController::class, 'storeContact'])->name('contact.store');
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 
 Route::get('/auth', function () {
     return view('auth');
@@ -37,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/contracts/create', [App\Http\Controllers\ContractController::class, 'create'])->name('contracts.create');
     Route::post('/contracts', [App\Http\Controllers\ContractController::class, 'store'])->name('contracts.store');
     Route::get('/contracts/{contract}', [App\Http\Controllers\ContractController::class, 'show'])->name('contracts.show');
+<<<<<<< HEAD
     
     Route::get('/feedback', [App\Http\Controllers\FeedbackController::class, 'create'])->name('feedback.create');
     Route::post('/feedback', [App\Http\Controllers\FeedbackController::class, 'store'])->name('feedback.store');
@@ -70,4 +74,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Customers
         Route::get('/customers', [App\Http\Controllers\Admin\CustomerController::class, 'index'])->name('customers.index');
     });
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 });

@@ -46,10 +46,17 @@
                 <section>
                     <h4 class="font-bold border-b border-slate-200 pb-1 mb-4 uppercase">BÊN BÁN (BÊN A): CÔNG TY CỔ PHẦN AUTOLUX VIỆT NAM</h4>
                     <ul class="grid grid-cols-2 gap-4">
+<<<<<<< HEAD
                         <li><strong>Đại diện:</strong> Ông Đỗ Văn Duy</li>
                         <li><strong>Chức vụ:</strong> Giám đốc Showroom</li>
                         <li><strong>Mã số thuế:</strong> 0101234567</li>
                         <li><strong>Số điện thoại:</strong> 0x xxx xxx</li>
+=======
+                        <li><strong>Đại diện:</strong> Ông Trần Minh Tuấn</li>
+                        <li><strong>Chức vụ:</strong> Giám đốc Showroom</li>
+                        <li><strong>Mã số thuế:</strong> 0101234567</li>
+                        <li><strong>Số điện thoại:</strong> 024 6291 8118</li>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                         <li class="col-span-2"><strong>Địa chỉ:</strong> {{ $contract->store_address }}</li>
                     </ul>
                 </section>
@@ -132,7 +139,11 @@
                         </div>
                         
                         <div class="mt-32">
+<<<<<<< HEAD
                             <p class="font-bold text-red-700">Đỗ Văn Duy</p>
+=======
+                            <p class="font-bold text-red-700">Trần Minh Tuấn</p>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                             <p class="text-xs text-slate-500 font-sans italic mt-1">(Đã ký bằng chữ ký số)</p>
                         </div>
                     </div>

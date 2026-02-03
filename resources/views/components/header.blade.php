@@ -22,7 +22,10 @@
                         ['name' => 'Danh sách xe', 'path' => '/cars'],
                         ['name' => 'Giới thiệu', 'path' => '/about'],
                         ['name' => 'Liên hệ', 'path' => '/contact'],
+<<<<<<< HEAD
                         ['name' => 'Phản hồi', 'path' => '/feedback'],
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                     ];
                 @endphp
 
@@ -55,12 +58,15 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                                 Hồ sơ của tôi
                             </a>
+<<<<<<< HEAD
                             @if(auth()->user()->role === 'admin')
                                 <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2 px-4 py-2 text-sm text-primary hover:bg-secondary transition-colors font-medium">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                                     Trang quản trị
                                 </a>
                             @endif
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                             <a href="{{ route('favorites') }}" class="flex items-center gap-2 px-4 py-2 text-sm hover:bg-secondary transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                                 Xe yêu thích
@@ -112,9 +118,12 @@
             
             @auth
                 <a href="{{ route('profile') }}" class="text-lg font-medium py-2 px-4 rounded-lg hover:bg-secondary">Cá Nhân</a>
+<<<<<<< HEAD
                 @if(auth()->user()->role === 'admin')
                     <a href="{{ route('admin.dashboard') }}" class="text-lg font-medium py-2 px-4 rounded-lg text-primary hover:bg-secondary">Trang quản trị</a>
                 @endif
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                 <a href="{{ route('favorites') }}" class="text-lg font-medium py-2 px-4 rounded-lg hover:bg-secondary">Xe yêu thích</a>
                 <a href="{{ route('contracts') }}" class="text-lg font-medium py-2 px-4 rounded-lg hover:bg-secondary">Hợp đồng của tôi</a>
                 <form method="POST" action="{{ route('logout') }}">

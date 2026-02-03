@@ -1,10 +1,18 @@
 @php
+<<<<<<< HEAD
     // Fetch latest available cars from Database
     $featuredCars = \App\Models\Car::with(['brand', 'category'])
                     ->where('status', 'available')
                     ->latest()
                     ->take(4)
                     ->get();
+=======
+    $cars = \App\Helpers\CarHelper::getCars();
+    $featuredCars = array_filter($cars, function($car) {
+        return isset($car['isHot']) && $car['isHot'];
+    });
+    $featuredCars = array_slice($featuredCars, 0, 4);
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 @endphp
 
 <section class="py-24 bg-secondary/30">

@@ -16,6 +16,7 @@
                 <!-- Car Summary -->
                 <div class="lg:col-span-1 space-y-6 animate-slide-up" style="animation-delay: 100ms">
                     <div class="card-luxury p-6 space-y-4">
+<<<<<<< HEAD
 @php
     $imageUrl = \Illuminate\Support\Str::startsWith($carModel->image, 'http') 
                 ? $carModel->image 
@@ -29,6 +30,15 @@
     <h3 class="font-bold text-xl">{{ $carModel->name }}</h3>
     <p class="text-sm text-muted-foreground">{{ $carModel->brand->name ?? 'N/A' }} • {{ $carModel->year }}</p>
 </div>
+=======
+                        <div class="aspect-video rounded-xl overflow-hidden">
+                            <img src="{{ $carModel->image }}" alt="{{ $carModel->name }}" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">{{ $carModel->name }}</h3>
+                            <p class="text-sm text-muted-foreground">{{ $carModel->brand }} • {{ $carModel->year }}</p>
+                        </div>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                         <div class="pt-4 border-t border-border">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-sm text-muted-foreground">Giá bán:</span>
@@ -61,8 +71,13 @@
                                     <input type="text" value="{{ Auth::user()->name }}" disabled class="w-full h-12 bg-secondary/50 border border-border rounded-xl px-4 text-muted-foreground cursor-not-allowed">
                                 </div>
                                 <div>
+<<<<<<< HEAD
                                     <label class="text-sm font-medium mb-2 block">Số CCCD / Passport <span class="text-red-500">*</span></label>
                                     <input type="text" name="cccd" required placeholder="Nhập số CCCD (9-12 số)" class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all @error('cccd') border-destructive @enderror">
+=======
+                                    <label class="text-sm font-medium mb-2 block">Số CCCD / Passport *</label>
+                                    <input type="text" name="cccd" required placeholder="Nhập số CCCD" class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all @error('cccd') border-destructive @enderror">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                                     @error('cccd') <p class="text-xs text-destructive mt-1">{{ $message }}</p> @enderror
                                 </div>
                             </div>

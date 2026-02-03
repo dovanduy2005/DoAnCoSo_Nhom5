@@ -24,7 +24,10 @@ class User extends Authenticatable
         'avatar',
         'phone',
         'address',
+<<<<<<< HEAD
         'role',
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
     ];
 
     /**
@@ -59,6 +62,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Contract::class);
     }
+<<<<<<< HEAD
 
     public function bookings()
     {
@@ -69,4 +73,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Feedback::class);
     }
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 }

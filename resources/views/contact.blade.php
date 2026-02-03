@@ -50,6 +50,7 @@
                     </div>
                 @endforeach
 
+<<<<<<< HEAD
                 <!-- Google Map -->
                 <div class="card-luxury rounded-2xl overflow-hidden aspect-video relative group shadow-lg border border-border/50">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.7483780373406!2d105.7460678759535!3d20.96263529004454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452efff3456d3%3A0x51e717abb1488da1!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBQaGVuaWthYQ!5e0!3m2!1svi!2s!4v1705050000000!5m2!1svi!2s" 
@@ -61,11 +62,17 @@
                         referrerpolicy="no-referrer-when-downgrade"
                         class="transition-all duration-700 opacity-100">
                     </iframe>
+=======
+                <!-- Map Placeholder -->
+                <div class="card-luxury rounded-2xl overflow-hidden aspect-video relative group">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3725.7483780373406!2d105.7460678759535!3d20.96263529004454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452efff3456d3%3A0x51e717abb1488da1!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBQaGVuaWthYQ!5e0!3m2!1svi!2s!4v1705050000000!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="grayscale group-hover:grayscale-0 transition-all duration-700 opacity-90 group-hover:opacity-100"></iframe>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                 </div>
             </div>
 
             <!-- Contact Form -->
             <div class="lg:col-span-3">
+<<<<<<< HEAD
                 @if(session('success'))
                     <div class="mb-8 p-4 bg-primary/10 border border-primary/20 rounded-2xl text-primary animate-slide-up">
                         <div class="flex items-center gap-3">
@@ -74,12 +81,15 @@
                         </div>
                     </div>
                 @endif
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                 <div class="card-luxury rounded-3xl p-8 md:p-10">
                     <h2 class="text-2xl font-bold mb-2">Gửi yêu cầu tư vấn</h2>
                     <p class="text-muted-foreground mb-8">
                         Điền thông tin bên dưới, chúng tôi sẽ liên hệ trong 30 phút
                     </p>
 
+<<<<<<< HEAD
                     <form action="{{ route('contact.store') }}" method="POST" class="space-y-6">
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -90,22 +100,45 @@
                             <div>
                                 <label class="text-sm font-medium mb-2 block">Số điện thoại *</label>
                                 <input type="tel" name="phone" placeholder="0901 234 567" required class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+=======
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-sm font-medium mb-2 block">Họ và tên *</label>
+                                <input type="text" placeholder="Nguyễn Văn A" required class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium mb-2 block">Số điện thoại *</label>
+                                <input type="tel" placeholder="0901 234 567" required class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                             </div>
                         </div>
 
                         <div>
                             <label class="text-sm font-medium mb-2 block">Email</label>
+<<<<<<< HEAD
                             <input type="email" name="email" placeholder="email@example.com" class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+=======
+                            <input type="email" placeholder="email@example.com" class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                         </div>
 
                         <div>
                             <label class="text-sm font-medium mb-2 block">Dòng xe quan tâm</label>
+<<<<<<< HEAD
                             <input type="text" name="car_interested" placeholder="VD: Mercedes S-Class, BMW X7..." class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+=======
+                            <input type="text" placeholder="VD: Mercedes S-Class, BMW X7..." class="w-full h-12 bg-secondary border border-border rounded-xl px-4 focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                         </div>
 
                         <div>
                             <label class="text-sm font-medium mb-2 block">Nội dung yêu cầu</label>
+<<<<<<< HEAD
                                 <textarea name="message" placeholder="Nhập nội dung yêu cầu của bạn..." class="w-full bg-secondary border border-border rounded-xl p-4 min-h-[120px] focus:outline-none focus:ring-1 focus:ring-primary transition-all"></textarea>
+=======
+                            <textarea placeholder="Nhập nội dung yêu cầu của bạn..." class="w-full bg-secondary border border-border rounded-xl p-4 min-h-[120px] focus:outline-none focus:ring-1 focus:ring-primary transition-all"></textarea>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                         </div>
 
                         <button type="submit" class="w-full bg-primary text-primary-foreground h-14 rounded-xl font-bold btn-primary-glow flex items-center justify-center gap-2">

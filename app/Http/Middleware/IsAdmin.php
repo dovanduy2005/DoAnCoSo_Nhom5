@@ -15,6 +15,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
+<<<<<<< HEAD
         // Try to get user from either guard
         $user = auth()->guard('admin')->user() ?? auth()->guard('web')->user();
 
@@ -29,6 +30,10 @@ class IsAdmin
         
         if (!auth()->guard('web')->check()) {
             auth()->login($user);
+=======
+        if (!auth()->check() || auth()->user()->role !== 'admin') {
+            abort(403, 'Bạn không có quyền truy cập trang này.');
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
         }
 
         return $next($request);

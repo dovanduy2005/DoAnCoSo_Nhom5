@@ -18,6 +18,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
+<<<<<<< HEAD
             $request->session()->regenerate();
             $user = Auth::user();
 
@@ -26,6 +27,22 @@ class AuthController extends Controller
                 return redirect()->route('admin.dashboard')
                     ->with('success', 'Đăng nhập quản trị thành công!');
             }
+=======
+            $user = Auth::user();
+            $requestedRole = $request->input('role', 'customer');
+            
+            // Kiểm tra role có khớp không
+            if ($user->role !== $requestedRole) {
+                Auth::logout();
+                return back()->withErrors([
+                    'email' => $requestedRole === 'admin' 
+                        ? 'Tài khoản này không có quyền quản trị.' 
+                        : 'Vui lòng sử dụng trang đăng nhập dành cho Admin.',
+                ])->onlyInput('email');
+            }
+            
+            $request->session()->regenerate();
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 
             return redirect()->intended('/')
                 ->with('success', 'Đăng nhập thành công!');
@@ -59,7 +76,10 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
+<<<<<<< HEAD
         Auth::guard('admin')->logout();
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();

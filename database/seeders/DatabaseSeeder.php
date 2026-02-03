@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+<<<<<<< HEAD
         // Admin User
         User::create([
             'name' => 'Admin User',
@@ -36,6 +37,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             BrandSeeder::class,
             CategorySeeder::class,
+=======
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
         ]);
     }
 }

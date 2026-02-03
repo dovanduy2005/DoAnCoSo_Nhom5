@@ -47,6 +47,7 @@
                     <div class="card-luxury p-6 space-y-4">
                         <h3 class="font-bold border-b border-border pb-2">Thống kê</h3>
                         <div class="flex items-center justify-between text-sm">
+<<<<<<< HEAD
                             <span class="text-muted-foreground">Đơn hàng</span>
                             <span class="font-medium text-foreground">{{ $stats['contracts_count'] }}</span>
                         </div>
@@ -57,6 +58,18 @@
                         <div class="flex items-center justify-between text-sm">
                             <span class="text-muted-foreground">Lịch hẹn</span>
                             <span class="font-medium text-foreground">{{ $stats['bookings_count'] }}</span>
+=======
+                            <span class="text-muted-foreground">Xe đã xem</span>
+                            <span class="font-medium text-foreground">12</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-muted-foreground">Xe yêu thích</span>
+                            <span class="font-medium text-foreground">5</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-muted-foreground">Lịch hẹn</span>
+                            <span class="font-medium text-foreground">0</span>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                         </div>
                     </div>
                 </div>
@@ -113,6 +126,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
 
             <!-- My Orders Section -->
@@ -200,6 +214,8 @@
             </div>
             @endif
 
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
         </div>
     </div>
 </div>

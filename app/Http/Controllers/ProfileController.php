@@ -10,6 +10,7 @@ class ProfileController extends Controller
 {
     public function show()
     {
+<<<<<<< HEAD
         $user = Auth::user();
         $contracts = $user->contracts()->with('car')->latest()->get();
         
@@ -23,6 +24,10 @@ class ProfileController extends Controller
             'user' => $user,
             'contracts' => $contracts,
             'stats' => $stats,
+=======
+        return view('profile.show', [
+            'user' => Auth::user(),
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
         ]);
     }
 

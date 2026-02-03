@@ -29,12 +29,16 @@
                         <div class="card-luxury p-6 flex flex-col md:flex-row items-center gap-6 group hover:border-primary/50 transition-all">
                             <!-- Car Image -->
                             <div class="w-full md:w-48 aspect-[16/10] rounded-xl overflow-hidden flex-shrink-0">
+<<<<<<< HEAD
                                 @php
                                     $imageUrl = \Illuminate\Support\Str::startsWith($contract->car->image, 'http') 
                                                 ? $contract->car->image 
                                                 : \Illuminate\Support\Facades\Storage::url($contract->car->image);
                                 @endphp
                                 <img src="{{ $imageUrl }}" alt="{{ $contract->car->name }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+=======
+                                <img src="{{ $contract->car->image }}" alt="{{ $contract->car->name }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                             </div>
 
                             <!-- Info -->

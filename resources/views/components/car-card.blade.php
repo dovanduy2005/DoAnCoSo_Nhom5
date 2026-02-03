@@ -1,6 +1,7 @@
 @props(['car'])
 
 @php
+<<<<<<< HEAD
     $isObject = is_object($car);
     $id = $isObject ? $car->id : $car['id'];
     
@@ -28,6 +29,23 @@
     $power = $isObject ? ($car->power ?? 'N/A') : ($car['power'] ?? $car['specs']['power'] ?? 'N/A');
     $fuel = $isObject ? ($car->fuel ?? 'N/A') : ($car['fuel'] ?? $car['specs']['fuel'] ?? 'N/A');
     $seats = $isObject ? ($car->seats ?? 'N/A') : ($car['seats'] ?? $car['specs']['seats'] ?? 'N/A');
+=======
+    $isFavorite = auth()->check() && auth()->user()->favorites()->where('car_id', $car['id'])->exists();
+    $isHot = $car['is_hot'] ?? $car['isHot'] ?? false;
+    $discount = $car['discount'] ?? null;
+    $id = $car['id'];
+    $brand = $car['brand'];
+    $name = $car['name'];
+    $type = $car['type'];
+    $year = $car['year'];
+    $price = $car['price'];
+    $image = $car['image'];
+    
+    // Handle specs which might be direct properties (model) or nested (helper)
+    $power = $car['power'] ?? $car['specs']['power'] ?? 'N/A';
+    $fuel = $car['fuel'] ?? $car['specs']['fuel'] ?? 'N/A';
+    $seats = $car['seats'] ?? $car['specs']['seats'] ?? 'N/A';
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
 @endphp
 
 <div class="group relative card-luxury rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 block">

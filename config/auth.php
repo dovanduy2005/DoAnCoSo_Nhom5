@@ -40,11 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+<<<<<<< HEAD
 
         'admin' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+=======
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
     ],
 
     /*

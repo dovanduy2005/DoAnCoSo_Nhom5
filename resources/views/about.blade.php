@@ -20,6 +20,7 @@
                     <div class="w-20 h-1 bg-primary rounded-full"></div>
                 </div>
                 <div class="relative">
+<<<<<<< HEAD
     <div class="aspect-[4/3] rounded-3xl overflow-hidden card-luxury group">
         <img
             src="https://static.danhgiaxe.com/data/201525/5lamborghini-aventador-a-lamborghini-should-neither-be-boring-nor-conventionally-beautiful-fortunately-the-flagship-aventador-isnt_4813.jpg"
@@ -33,6 +34,15 @@
     </div>
 </div>
 
+=======
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden card-luxury">
+                        <img src="https://images.unsplash.com/photo-1562141961-b5d1e0c4d3de?w=800&q=80" alt="Showroom" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-48 h-48 rounded-2xl overflow-hidden card-luxury border-4 border-background">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400&q=80" alt="Team" class="w-full h-full object-cover">
+                    </div>
+                </div>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
             </div>
         </section>
 

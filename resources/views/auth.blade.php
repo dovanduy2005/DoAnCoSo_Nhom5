@@ -3,7 +3,11 @@
 @section('title', 'Đăng nhập / Đăng ký - AutoLux')
 
 @section('content')
+<<<<<<< HEAD
 <div class="min-h-screen bg-background flex" x-data="{ mode: 'login', showPassword: false }">
+=======
+<div class="min-h-screen bg-background flex" x-data="{ mode: 'customer_login', showPassword: false }">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
     <!-- Left - Form -->
     <div class="flex-1 flex items-center justify-center p-8 pt-32 lg:pt-8">
         <div class="w-full max-w-md">
@@ -18,10 +22,27 @@
                 </div>
             </a>
 
+<<<<<<< HEAD
             <!-- Header -->
             <div class="mb-8">
                 <h2 class="text-3xl font-bold mb-2" x-text="mode === 'login' ? 'Đăng nhập' : 'Tạo tài khoản'"></h2>
                 <p class="text-muted-foreground" x-text="mode === 'login' ? 'Đăng nhập để lưu xe yêu thích và theo dõi đơn hàng' : 'Đăng ký để trải nghiệm dịch vụ tốt nhất'"></p>
+=======
+            <!-- Mode Selector -->
+            <div class="flex p-1 bg-secondary rounded-xl mb-8">
+                <button @click="mode = 'customer_login'" :class="mode === 'customer_login' ? 'bg-primary text-primary-foreground shadow-lg' : 'text-muted-foreground'" class="flex-1 py-2.5 rounded-lg text-sm font-bold transition-all">
+                    KHÁCH HÀNG
+                </button>
+                <button @click="mode = 'admin_login'" :class="mode === 'admin_login' ? 'bg-primary text-primary-foreground shadow-lg' : 'text-muted-foreground'" class="flex-1 py-2.5 rounded-lg text-sm font-bold transition-all">
+                    QUẢN TRỊ VIÊN
+                </button>
+            </div>
+
+            <!-- Header -->
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-2" x-text="mode === 'customer_login' ? 'Đăng nhập Khách hàng' : (mode === 'admin_login' ? 'Đăng nhập Admin' : 'Tạo tài khoản')"></h2>
+                <p class="text-muted-foreground" x-text="mode === 'customer_login' ? 'Đăng nhập để lưu xe yêu thích và theo dõi đơn hàng' : (mode === 'admin_login' ? 'Truy cập trang quản trị hệ thống' : 'Đăng ký để trải nghiệm dịch vụ tốt nhất')"></p>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
             </div>
 
             <!-- Error Messages -->
@@ -35,9 +56,16 @@
                 </div>
             @endif
 
+<<<<<<< HEAD
             <!-- Login Form -->
             <form x-show="mode === 'login'" action="{{ url('/login') }}" method="POST" class="space-y-5">
                 @csrf
+=======
+            <!-- Login Form (Customer & Admin) -->
+            <form x-show="mode === 'customer_login' || mode === 'admin_login'" action="{{ url('/login') }}" method="POST" class="space-y-5">
+                @csrf
+                <input type="hidden" name="role" :value="mode === 'customer_login' ? 'customer' : 'admin'">
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                 <div>
                     <label class="text-sm font-medium mb-2 block">Email</label>
                     <div class="relative">
@@ -59,7 +87,11 @@
                 </div>
 
                 <button type="submit" class="w-full bg-primary text-primary-foreground h-14 rounded-xl font-bold btn-primary-glow flex items-center justify-center gap-2">
+<<<<<<< HEAD
                     <span>Đăng nhập</span>
+=======
+                    <span x-text="mode === 'customer_login' ? 'Đăng nhập Khách hàng' : 'Đăng nhập Admin'"></span>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                 </button>
             </form>
 
@@ -104,11 +136,19 @@
             </form>
 
             <!-- Toggle -->
+<<<<<<< HEAD
             <div class="mt-8 text-center">
                 <p class="text-muted-foreground">
                     <span x-text="mode === 'login' ? 'Chưa có tài khoản?' : 'Đã có tài khoản?'"></span>
                     <button @click="mode = (mode === 'login' ? 'register' : 'login')" class="ml-2 text-primary font-medium hover:underline">
                         <span x-text="mode === 'login' ? 'Đăng ký ngay' : 'Đăng nhập'"></span>
+=======
+            <div class="mt-8 text-center" x-show="mode !== 'admin_login'">
+                <p class="text-muted-foreground">
+                    <span x-text="mode === 'customer_login' ? 'Chưa có tài khoản?' : 'Đã có tài khoản?'"></span>
+                    <button @click="mode = (mode === 'customer_login' ? 'register' : 'customer_login')" class="ml-2 text-primary font-medium hover:underline">
+                        <span x-text="mode === 'customer_login' ? 'Đăng ký ngay' : 'Đăng nhập Khách hàng'"></span>
+>>>>>>> ae3eca91d202169d17a06e35ad479d823d1102e2
                     </button>
                 </p>
             </div>
